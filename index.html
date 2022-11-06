@@ -1,0 +1,160 @@
+<!-- Christian Hart 001-68-3628 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 5%;
+      }
+      body .container {
+        padding: 10px;
+      }
+    </style>
+    <title>JavaScript Classwork</title>
+  </head>
+  <body id="container">
+    <h1>Classwork 04 # 05</h1>
+    <h2>Part 1</h2>
+
+    <label for="fibonacci"
+      >(1) Using JavaScript we can generate the Fibonacci sequence. Enter then
+      length of the sequence here:</label
+    >
+    <input
+      type="number"
+      id="fibonacci"
+      name="fibonacci"
+      min="0"
+      max="35"
+      placeholder="from 0 to 35"
+    />
+    <button
+      type="button"
+      onclick="problem1(document.getElementById('fibonacci').value)"
+    >
+      Generate Fibonacci Sequence
+    </button>
+    <p id="demo1"></p>
+    <br />
+
+    <label for="triStar"
+      >(2) We can also generate an asterisk triangle. How tall should the
+      pyramid be in rows?</label
+    >
+    <input
+      type="number"
+      id="triStar"
+      name="triStar"
+      min="0"
+      max="35"
+      placeholder="from 0 to 35"
+    />
+    <button
+      type="button"
+      onclick="problem2(document.getElementById('triStar').value)"
+    >
+      Generate Asterisk Triangle
+    </button>
+    <p id="demo2" style="white-space: pre-line"></p>
+    <br />
+
+    <p>
+      (3) JavaScript also has many useful built in functions. We can quickly
+      sort the elements of an array. Try it on the following array:
+    </p>
+    <label for="sort">[ 3, 8, 7, 6, 5, -4, 3, 2, 1 ]</label>
+    <button type="button" name="sort" onclick="problem3(arr1)">Sort</button>
+    <p id="demo3"></p>
+    <br />
+
+    <p>
+      (4) It's also possible to search for the most frequent element in an
+      array. Try this function out on the following array:
+    </p>
+    <label for="mode">[ 3, a, a, a, 2, 3, a, 3, a, 2, 4, 9, 3 ]</label>
+    <button type="button" name="mode" onclick="arrayMode(arr4)">
+      Find Most Frequent
+    </button>
+    <p id="demo4"></p>
+    <br />
+
+    <p>
+      (5) But maybe you'd rather randomize the elements of an array. We can do
+      that too. Let's try it on the last array:
+    </p>
+    <label for="shuffle">[ 3, a, a, a, 2, 3, a, 3, a, 2, 4, 9, 3 ]</label>
+    <button type="button" name="shuffle" onclick="shuffle(arr4)">
+      Shuffle
+    </button>
+    <p id="demo5"></p>
+    <br />
+
+    <div>
+      <p>(6) We can even use JavaScript to edit styles on this page.</p>
+      <label for="bgColor">Choose the background color: </label>
+      <input type="text" id="bgColor" name="bgColor" />
+      <label for="text-color">Choose the text color: </label>
+      <input type="text" id="txtColor" name="txtColor" />
+      <button
+        type="button"
+        onclick="colors(document.getElementById('bgColor').value,
+        document.getElementById('txtColor').value)"
+      >
+        Select Colors
+      </button>
+      <button type="button" onclick="reset()">Reset Colors</button>
+    </div>
+
+    <h2>Part 2</h2>
+    <h3>Problem 1</h3>
+    <p>
+      Let try something different! This time how about you create your own
+      array. Next, JavaScript will take your array and divide it into two new
+      arrays, one with all even numbers and the other will all odd numbers.
+    </p>
+    <label for="arrayInput">Add an item to your array: </label>
+    <input type="text" name="arrayInput" id="arrayInput" placeholder="number" />
+    <button
+      type="button"
+      onclick="arrayBuilder(document.getElementById('arrayInput').value)"
+    >
+      Add to Array
+    </button>
+    <p id="demo7"></p>
+
+    <p>
+      When you've finished loading up your array, use the button below to divide
+      it into even and odd numbers.
+    </p>
+    <button type="button" onclick="divideArray(evenOddArr)">
+      Divide Array
+    </button>
+    <p id="demoEven"></p>
+    <p id="demoOdd"></p>
+
+    <h3>Problem 2</h3>
+    <p>
+      Cool! Now let's try a guessing game. I'm thinking of a number between 1
+      and 100. See if you can guess what it is. I'll give 10 tries to figure it
+      out.
+    </p>
+    <label for="guess">Enter your guess here: </label>
+    <input type="number" name="guess" id="guess" min="1" max="100" />
+    <button
+      type="button"
+      onclick="playGuessingGame(document.getElementById('guess').value)"
+    >
+      Guess
+    </button>
+    <p id="demo8"></p>
+    <p>Refesh the page to try a new game!</p>
+
+    <a href="../index.html">Back to Student Homepage</a>
+
+    <script src="myScript.js"></script>
+  </body>
+</html>
